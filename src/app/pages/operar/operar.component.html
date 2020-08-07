@@ -2,129 +2,138 @@
   <div class="row">
     <div class="form-group col-12">
       <label for="corretora">Selecione a Corretora</label>
-     
+      <select class="form-control form-control-lg select-custom-corretora">
+        <option value="">IQ Option</option>
+        <option value="">Binomo</option>
+        <option value="">Binary</option>
+      </select>
     </div>
-    <div class="form-group col-12">
-      <button class="btn btn-warning btn-block">Histórico Completo</button>
+    <div (click)="operar()" *ngIf="!comecarOperar" class="form-group col-12">
+      <button class="btn btn-primary btn-block">Operar!</button>
+    </div>
+    <div (click)="fechar()" *ngIf="comecarOperar" class="form-group col-12">
+      <button class="btn btn-danger btn-block">Fechar - {{ time }} segundo(s)</button>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12">
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        Você bateu sua meta! Parabéns está na hora de <strong>PARA!</strong>
-        <button type="button" class="close mt-0" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+  <div *ngIf="comecarOperar">
+    <div class="row">
+      <div class="col-12">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          Você bateu sua meta! Parabéns está na hora de <strong>PARA!</strong>
+          <button type="button" class="close mt-0" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  <div class=" row">
-    <div class=" col-6">
-      <div class="card">
-        <div class=" card-header">
-          Registrar Operação
-        </div>
-        <div class=" card-body">
-          <form>
-            <div class="row">
-              <div class="form-group col-8">
-                <label for="valorOperacao">Valor Operação</label>
-                <input type="text" mask="separator.2" thousandSeparator="."
-                       prefix="$"
-                       class="form-control mr-3 mb-0" id="valorOperacao"
-                       placeholder="$100">
-              </div>
+    <div class=" row">
+      <div class=" col-6">
+        <div class="card">
+          <div class=" card-header">
+            Registrar Operação
+          </div>
+          <div class=" card-body">
+            <form>
+              <div class="row">
+                <div class="form-group col-8">
+                  <label for="valorOperacao">Valor Operação</label>
+                  <input type="text" mask="separator.2" thousandSeparator="."
+                        prefix="$"
+                        class="form-control mr-3 mb-0" id="valorOperacao"
+                        placeholder="$100">
+                </div>
 
-              <div class="form-group col-4">
-                <label for="valorOperacao">Payout</label>
-                <input type="text" mask="percent" suffix="%"
-                       class="form-control mr-3 mb-0" id="payoutOperacao"
-                       placeholder="100%">
+                <div class="form-group col-4">
+                  <label for="valorOperacao">Payout</label>
+                  <input type="text" mask="percent" suffix="%"
+                        class="form-control mr-3 mb-0" id="payoutOperacao"
+                        placeholder="100%">
+                </div>
               </div>
-            </div>
+              <div class="row">
+                <div class="form-group col-12">
+                  <button class="btn btn-success btn-block">Registrar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class=" col-6">
+        <div class="card">
+          <div class=" card-header">
+            Histórico Fechamento Dia
+          </div>
+          <div class=" card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Data</th>
+                  <th scope="col">Lucro/Perca</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>04/08/2020</td>
+                  <td>$ 10</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>05/08/2020</td>
+                  <td>$ 15</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>06/08/2020</td>
+                  <td>$ 20</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>07/08/2020</td>
+                  <td>$ 35</td>
+                </tr>
+              </tbody>
+            </table>
             <div class="row">
               <div class="form-group col-12">
-                <button class="btn btn-success btn-block">Registrar</button>
+                <button class="btn btn-warning btn-block">Histórico Completo</button>
               </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class=" col-6">
-      <div class="card">
-        <div class=" card-header">
-          Histórico Fechamento Dia
-        </div>
-        <div class=" card-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Data</th>
-                <th scope="col">Lucro/Perca</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>04/08/2020</td>
-                <td>$ 10</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>05/08/2020</td>
-                <td>$ 15</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>06/08/2020</td>
-                <td>$ 20</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>07/08/2020</td>
-                <td>$ 35</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="row">
-            <div class="form-group col-12">
-              <button class="btn btn-warning btn-block">Histórico Completo</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- TABLES OPERACOES -->
+    <!-- TABLES OPERACOES -->
 
-  <div class=" row">
-    <div class=" col-12">
-      <div class="card">
-        <div class=" card-header">
-          Operações
-        </div>
-        <div class=" card-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Payout</th>
-                <th scope="col">Operação</th>
-                <th scope="col">Lucro/Perca</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>80%</td>
-                <td>$ 10</td>
-                <td>$ +8</td>
-              </tr>
-            </tbody>
-          </table>
+    <div class=" row">
+      <div class=" col-12">
+        <div class="card">
+          <div class=" card-header">
+            Operações
+          </div>
+          <div class=" card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Payout</th>
+                  <th scope="col">Operação</th>
+                  <th scope="col">Lucro/Perca</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>80%</td>
+                  <td>$ 10</td>
+                  <td>$ +8</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

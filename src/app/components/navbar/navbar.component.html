@@ -26,7 +26,7 @@
     <div class=" navbar-collapse" [ngbCollapse]="isCollapsed" id="navigation">
       <ul class=" navbar-nav ml-auto">
         <li class=" search-bar input-group">
-          <button
+          <!-- <button
             class=" btn btn-link"
             data-target="#searchModal"
             data-toggle="modal"
@@ -35,10 +35,10 @@
           >
             <i class=" tim-icons icon-zoom-split"> </i>
             <span class=" d-lg-none d-md-block"> Search </span>
-          </button>
+          </button> -->
         </li>
         <li class=" nav-item" ngbDropdown>
-          <a
+          <!-- <a
             class=" nav-link"
             data-toggle="dropdown"
             href="javascript:void(0)"
@@ -74,8 +74,36 @@
                 Another one
               </a>
             </li>
+          </ul> -->
+        </li>
+
+        <li class="nav-item">
+          <ul>
+            <li class="nav-link">
+              <label for="banca">Conta:</label>
+              <p class="display-4 custom-topo-conta"> Conta 1 </p>
+            </li>
           </ul>
         </li>
+
+        <li class="nav-item">
+          <ul>
+            <li class="nav-link">
+              <label for="banca">Meta Dia:</label>
+              <p class="display-4 custom-topo-meta"> %3 </p>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <ul>
+            <li class="nav-link">
+              <label for="banca">Banca:</label>
+              <p class="display-4 custom-topo-banca"> 1.200.000,00</p>
+            </li>
+          </ul>
+        </li>
+
         <li class=" nav-item" ngbDropdown>
           <a
             class=" nav-link"
@@ -87,7 +115,7 @@
               <img alt="Profile Photo" src="assets/img/anime3.png" />
             </div>
             <b class=" caret d-none d-lg-block d-xl-block"> </b>
-            <p class=" d-lg-none">Log out</p>
+            <p class=" d-lg-none">Sair</p>
           </a>
           <ul class=" dropdown-navbar" ngbDropdownMenu>
             <li class=" nav-link">
@@ -103,7 +131,7 @@
             <li class=" dropdown-divider"></li>
             <li class=" nav-link">
               <a class=" nav-item" href="javascript:void(0)" ngbDropdownItem>
-                Log out
+                Sair
               </a>
             </li>
           </ul>

@@ -1,0 +1,86 @@
+<div class=" content">
+  <div class="row">
+    <div class="col-12">
+      <form class="mb-3">
+        <div class="row">
+          <div class="form-group col-6">
+            <label for="nomeConta">Nome Conta</label>
+            <input type="text" class="form-control" id="nomeConta"
+                  aria-describedby="nomeConta">
+          </div>
+          <div class="form-group col-6">
+            <label for="corretora">Selecione a Corretora</label>
+            <select class="form-control select-custom-corretora">
+              <option value="">IQ Option</option>
+              <option value="">Binomo</option>
+              <option value="">Binary</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-6">
+            <label for="metaDia">Meta Dia</label>
+            <input type="text" suffix="%" mask="percent" 
+                  class="form-control" id="metaDia"
+                  aria-describedby="metaDia">
+          </div>
+  
+          <div class="form-group col-6">
+            <label for="banca">Banca</label>
+            <input type="text" mask="separator.2" thousandSeparator="."
+                          prefix="$"
+                          class="form-control mr-3 mb-0" id="banca"
+                          placeholder="$100">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <button class="btn btn-success">Cadastrar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+ 
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class=" card-header">
+          Corretoras
+        </div>
+        <div class=" card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome Conta</th>
+                <th scope="col">Corretora</th>
+                <th scope="col">Banca</th>
+                <th scope="col">Meta Dia</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Conta 1</td>
+                <td>IQ Option</td>
+                <td>$ 10000</td>
+                <td>%3</td>
+                <td>
+                  <a class="btn btn-primary mr-2" href="">
+                    edit
+                  </a>
+                  <a class="btn btn-danger" href="">
+                    X
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+</div>

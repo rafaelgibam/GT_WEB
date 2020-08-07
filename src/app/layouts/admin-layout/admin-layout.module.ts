@@ -9,6 +9,8 @@ import { DashboardComponent } from "../../pages/dashboard/dashboard.component";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { NgxMaskModule } from 'ngx-mask';
+import { OperarComponent } from 'src/app/pages/operar/operar.component';
+import { CorretoraComponent } from 'src/app/pages/corretora/corretora.component';
 
 
 @NgModule({
@@ -21,7 +23,7 @@ import { NgxMaskModule } from 'ngx-mask';
     NgxMaskModule.forRoot(),
   ],
   declarations: [
-    DashboardComponent,
+    DashboardComponent, OperarComponent, CorretoraComponent
   ]
 })
 export class AdminLayoutModule {}
