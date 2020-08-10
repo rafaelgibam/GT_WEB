@@ -23,8 +23,8 @@ export const ROUTES: RouteInfo[] = [
     class: ""
   },
   {
-    path: "/corretora",
-    title: "Corretora",
+    path: "/conta",
+    title: "Conta",
     rtlTitle: "لوحة القيادة",
     icon: "icon-bank",
     class: ""

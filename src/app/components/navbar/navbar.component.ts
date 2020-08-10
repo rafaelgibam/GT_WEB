@@ -20,6 +20,31 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   closeResult: string;
 
+  conta: any;
+  metaDia: any;
+  banca: any;
+
+  contas = [
+    {
+      conta: 'CONTA 1',
+      corretora: 'IQ OPTION',
+      banca: 100000,
+      meta: 10
+    },
+    {
+      conta: 'CONTA 2',
+      corretora: 'IQ OPTION',
+      banca: 200000,
+      meta: 20
+    },
+    {
+      conta: 'CONTA 3',
+      corretora: 'BINOMO',
+      banca: 150000,
+      meta: 25
+    }
+  ]
+
   constructor(
     location: Location,
     private element: ElementRef,
@@ -53,6 +78,18 @@ export class NavbarComponent implements OnInit, OnDestroy {
         this.mobile_menu_visible = 0;
       }
     });
+
+    this.conta = this.contas[0].conta
+    this.metaDia = this.contas[0].meta
+    this.banca = this.contas[0].banca
+  }
+
+  
+  escolhaConta(event) {
+    console.log(event)
+    this.conta = this.contas[event].conta
+    this.metaDia = this.contas[event].meta
+    this.banca = this.contas[event].banca
   }
 
   collapse() {

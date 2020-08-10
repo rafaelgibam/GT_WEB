@@ -1,13 +1,5 @@
 <div class=" content">
   <div class="row">
-    <div class="form-group col-12">
-      <label for="corretora">Selecione a Corretora</label>
-      <select class="form-control form-control-lg select-custom-corretora">
-        <option value="">IQ Option</option>
-        <option value="">Binomo</option>
-        <option value="">Binary</option>
-      </select>
-    </div>
     <div (click)="operar()" *ngIf="!comecarOperar" class="form-group col-12">
       <button class="btn btn-primary btn-block">Operar!</button>
     </div>

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { timer } from 'rxjs';
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-operar',
@@ -16,7 +17,7 @@ export class OperarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  
+    
   }
 
   operar() {

@@ -80,8 +80,9 @@
         <li class="nav-item">
           <ul>
             <li class="nav-link">
-              <label for="banca">Conta:</label>
-              <p class="display-4 custom-topo-conta"> Conta 1 </p>
+              <select (change)="escolhaConta($event.target.value)" class="form-control form-control-lg custom-topo-conta select-custom-corretora">
+                  <option *ngFor="let b of contas; let i = index" value="{{ i }}">{{ b.conta }} - {{ b.corretora }}</option>
+              </select>
             </li>
           </ul>
         </li>
@@ -90,7 +91,7 @@
           <ul>
             <li class="nav-link">
               <label for="banca">Meta Dia:</label>
-              <p class="display-4 custom-topo-meta"> %3 </p>
+              <p class="display-4 custom-topo-meta"> {{ metaDia }}% </p>
             </li>
           </ul>
         </li>
@@ -99,7 +100,7 @@
           <ul>
             <li class="nav-link">
               <label for="banca">Banca:</label>
-              <p class="display-4 custom-topo-banca"> 1.200.000,00</p>
+              <p class="display-4 custom-topo-banca"> $ {{ banca | mask: 'separator.2' : '.' }} </p>
             </li>
           </ul>
         </li>

@@ -1,4 +1,14 @@
-.custom-topo-conta, .custom-topo-meta, .custom-topo-banca  {
+.custom-topo-meta, .custom-topo-banca  {
     width: 6em;
 }
 
+.custom-topo-conta  {
+    width: 15em;
+}
+
+.select-custom-corretora {
+    color: white;
+    background: #1e1e2e;
+    border-radius: 10px;
+    text-align-last: center;
+}

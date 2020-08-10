@@ -7,6 +7,6 @@ import { CorretoraComponent } from 'src/app/pages/corretora/corretora.component'
 export const AdminLayoutRoutes: Routes = [
   { path: "dashboard", component: DashboardComponent },
   { path: "operar", component: OperarComponent },
-  { path: "corretora", component: CorretoraComponent },
+  { path: "conta", component: CorretoraComponent },
   
 ];
